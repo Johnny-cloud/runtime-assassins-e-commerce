@@ -23,7 +23,9 @@ function ContactUs() {
   }
   return (
     <div className='container'>
+        
         <div className='contact'>
+        <h1>We would love to hear from you!</h1>
           <p>
             For questions regarding our products and services you can also contact us by filling out the form below.
           </p>
