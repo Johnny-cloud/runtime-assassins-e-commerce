@@ -135,10 +135,15 @@ input{
     border:none;
 }
 .landing-page{
-    background-image: url("https://i.pinimg.com/736x/db/12/fe/db12fea16a6836ac1a7580921983fa06.jpg");
+    background-image: url("https://images.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg?cs=srgb&dl=pexels-pixabay-157888.jpg&fm=jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 900px;
+}
+.landing-page > h1{
+    padding-top: 300px;
+    color: white;
+    font-size: 50px;
 }
 .checked {
     color: orange;
