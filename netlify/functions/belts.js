@@ -75,6 +75,10 @@ let belts = [
 exports.handler = async () => {
     return {
       statusCode: 200,
+      headers : {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      },
       body: JSON.stringify(belts),
     };
   };
