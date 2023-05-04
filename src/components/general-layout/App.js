@@ -19,7 +19,7 @@ function App() {
 
   useEffect(
     () => {
-      fetch("http://localhost:3000/belts")
+      fetch("https://runtime-assassins-ecommerce.netlify.app/.netlify/functions/belts")
       .then(res => res.json())
       .then(data => setBelts([...data]))
     }, []
@@ -27,7 +27,7 @@ function App() {
   
   useEffect(
     () => {
-      fetch("http://localhost:3000/bracelets")
+      fetch("https://runtime-assassins-ecommerce.netlify.app/.netlify/functions/bracelets")
       .then(res => res.json())
       .then(data => setBracelets([...data]))
     }, []
@@ -35,7 +35,7 @@ function App() {
 
   useEffect(
     () => {
-      fetch("http://localhost:3000/handbags")
+      fetch("https://runtime-assassins-ecommerce.netlify.app/.netlify/functions/handbags")
       .then(res => res.json())
       .then(data => setHandBags([...data]))
     }, []
@@ -43,7 +43,7 @@ function App() {
 
   useEffect(
     () => {
-      fetch("http://localhost:3000/watches")
+      fetch("https://runtime-assassins-ecommerce.netlify.app/.netlify/functions/watches")
       .then(res => res.json())
       .then(data => setWatches([...data]))
     }, []
