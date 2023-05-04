@@ -1,7 +1,7 @@
 # Runtime Assassins E-Commerce
 
 **Written on 03 May 2023**\
-**By John kipruto**
+**By Runtime Assassins**
 
 ## About the project
 
