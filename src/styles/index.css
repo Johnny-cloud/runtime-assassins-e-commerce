@@ -9,8 +9,9 @@ body{
 .item{
     width: 20%;
     border-color: antiquewhite;
-    background-color: bisque;
-    color:rgb(70, 64, 64);
+    background: rgb(113,112,99);
+    background: linear-gradient(83deg, rgba(113,112,99,1) 0%, rgba(140,131,109,0.9976365546218487) 100%);
+    color:white;
     border-style: solid;
     border-radius: 10px;
     margin: 20px;
@@ -43,7 +44,7 @@ img{
     color: white;
 }
 
-.row{
+.row, .checkout-row{
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -63,8 +64,8 @@ button{
 }
 .col-amnt{
     width: 20%;
-    padding-left: 0px;
-    margin-right: 20px;
+    padding-left: 30px;
+    margin-right: 50px;
     left: 0;
 }
 .col-act{
@@ -98,6 +99,7 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 .nav > a{
     margin-right: 80px;
@@ -114,9 +116,9 @@ button{
 .cart, .row{
     border-radius: 5px;
     border-style: solid;
-    border-color: rgb(81, 70, 54);
-    background-color: bisque;
-    color: black;
+    background: rgb(113,112,99);
+    background: linear-gradient(83deg, rgba(113,112,99,1) 0%, rgba(140,131,109,0.9976365546218487) 100%);
+    color: white;
     
 }
 .cart{
@@ -168,8 +170,9 @@ form{
     margin: auto;
     padding: 40px 0px;
     margin-top: 70px;
-    background-color: bisque;
-    color: black;
+    background: rgb(113,112,99);
+    background: linear-gradient(83deg, rgba(113,112,99,1) 0%, rgba(140,131,109,0.9976365546218487) 100%);
+    color: white;
     border-radius: 10px;
 }
 label{
@@ -195,4 +198,44 @@ form > button:hover{
     font-size: 20px;
     background-color: green;
     color: aliceblue;
+}
+.checkout-row-container{
+    border-radius: 10px;
+    border-style: solid;
+    background: rgb(113,112,99);
+    background: linear-gradient(83deg, rgba(113,112,99,1) 0%, rgba(140,131,109,0.9976365546218487) 100%);
+    color: white;
+    margin: auto;
+    width: 60%;
+    margin-top: 50px;
+}
+@media only screen and (max-width: 600px) {
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+ 
+
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .nav{
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
 }

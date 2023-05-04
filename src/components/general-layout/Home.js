@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className='container'>
       <div className='landing-page'>
-        <h1>Runtime Assassins E-Commerce</h1>
+        <h1>The Mode App</h1>
       </div>
     </div>
   )
