@@ -4,6 +4,7 @@ import Rating from './Rating';
 function Item({item, cart, setCart}) {
 
   const [itemQuantity, setItemQuantity] = useState('')
+  const [rateIn, setRateIn] = useState(0);
   
 
   function handleChange(event){
@@ -27,9 +28,17 @@ function Item({item, cart, setCart}) {
       alert("Make sure the quantity is 1 or greater than 1.");
       return;
     }
- 
+  }
+
+  function rate(){
+    alert("Thank you for your feedback !");
+    setRateIn(0)
+  }
+
+  function handleRateChange(event){
+    let inVal = parseInt(event.target.value, 10);
+    setRateIn(inVal);
     
-    console.log(item);
   }
 
   return (
@@ -39,7 +48,14 @@ function Item({item, cart, setCart}) {
       <p><strong>Ksh {item.amount}</strong></p>
       <div>
       
-      <span><Rating rate={item.rating}/></span>
+      <div className='rate'>
+      <Rating rate={item.rating}/>
+        <div className='hover-rate'>
+          <input type='number' value={rateIn} onChange={handleRateChange}></input><span></span> <strong> / 10</strong><br></br>
+          <button className='rate-btn' onClick={rate}>Rate</button>
+        </div>
+      </div>
+      
       </div>
       <div>
         <span><strong>Quantity</strong></span><input type="number" onChange={handleChange} name="quantity" value={itemQuantity} placeholder='0'></input>
