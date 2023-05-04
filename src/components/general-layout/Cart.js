@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import CartItem from './CartItem'
 
-function Cart({cart, setCart}) {
-  console.log("Cart items :", cart)
+import { useNavigate } from 'react-router-dom'
 
+function Cart({cart, setCart, setCartCheckout, setCartTotal}) {
+
+  let navigate = useNavigate();
   const [total, setTotal] = useState(0);
+  
 
   useEffect(
     () => {
@@ -13,10 +16,20 @@ function Cart({cart, setCart}) {
       )
     }, [cart]
   )
+
+  useEffect(
+    () => {
+     
+    }, []
+  )
+  
   
   function checkOut(){
-        setCart([]);
-        alert("Thank you for shopping with us!")
+        setCartCheckout(cart);
+        setCartTotal(total);
+        setCart([]); 
+        navigate("/checkout");
+       
   }
   
   return (
@@ -37,8 +50,8 @@ function Cart({cart, setCart}) {
             <div className='col-amnt'><h3>{ total}</h3></div>
             <div className='col-act'><button className='checkout-btn' onClick={checkOut}>Checkout</button></div>
           </div>
-   
-
+         
+         
       
     </div>
   )

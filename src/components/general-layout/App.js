@@ -6,6 +6,7 @@ import Home from "./Home"
 import Cart from './Cart';
 import NavBar from "./NavBar"
 import ContactUs from "./ContactUs"
+import Checkout from './Checkout';
 
 
 
@@ -15,7 +16,8 @@ function App() {
   const [handBags, setHandBags] = useState([]);
   const [watches, setWatches] = useState([]);
   const [cart, setCart] = useState([]);
-
+  const [cartCheckout, setCartCheckout] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(
     () => {
@@ -80,11 +82,14 @@ function App() {
             } />
 
       <Route exact path="/cart" element={
-      <Cart  cart={cart}  setCart={setCart}/>
+      <Cart  cart={cart}  setCart={setCart} setCartCheckout={setCartCheckout} setCartTotal={setCartTotal}/>
       }/>
 
       <Route exact path ="/contact" element={
         <ContactUs />
+      }/>
+       <Route exact path ="/checkout" element={
+         <Checkout cart={cartCheckout} total={cartTotal} />
       }/>
      
     </Routes>
