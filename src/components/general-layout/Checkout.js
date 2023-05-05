@@ -27,7 +27,8 @@ function Checkout({cart, total}) {
           <div>
             <Link><img className='payment' src='https://play-lh.googleusercontent.com/bRZF74-13jknePwUd1xam5ZCSdAJVuI_wqtkrisBgu7EEh1jobh2boZihlk-4ikY_S3V' alt='mpesa'/></Link>
             <Link><img className='payment' src='https://static.vecteezy.com/system/resources/previews/009/469/637/original/paypal-payment-icon-editorial-logo-free-vector.jpg' alt='paypal'/></Link>
-        
+            <Link><img className='payment' src='https://alfasegur.com/wp-content/uploads/2017/01/vissa.png' alt='visa'/></Link>
+            <Link><img className='payment' src='https://hapakenya.com/wp-content/uploads/2014/04/MasterCard-Logo.jpg' alt='mastercard'/></Link>
           </div>
        </div>
         
