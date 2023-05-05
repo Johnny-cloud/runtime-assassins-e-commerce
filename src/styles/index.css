@@ -236,6 +236,10 @@ form > button:hover{
     color: aliceblue;
     font-size: 18px;
 }
+.payment{
+    width: 300px;
+    height: 200px;
+}
 @media only screen and (max-width: 600px) {
     .nav{
         display: flex;

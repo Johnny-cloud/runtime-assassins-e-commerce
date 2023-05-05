@@ -1,5 +1,6 @@
 import React from 'react'
 import CheckoutItem from './CheckoutItem';
+import { Link } from 'react-router-dom';
 
 function Checkout({cart, total}) {
     console.log(cart, total);
@@ -20,6 +21,15 @@ function Checkout({cart, total}) {
             <div className='col-act'></div>
           </div>
         </div>
+
+        <div>
+          <h2>Payment options</h2>
+          <div>
+            <Link><img className='payment' src='https://play-lh.googleusercontent.com/bRZF74-13jknePwUd1xam5ZCSdAJVuI_wqtkrisBgu7EEh1jobh2boZihlk-4ikY_S3V' alt='mpesa'/></Link>
+            <Link><img className='payment' src='https://static.vecteezy.com/system/resources/previews/009/469/637/original/paypal-payment-icon-editorial-logo-free-vector.jpg' alt='paypal'/></Link>
+        
+          </div>
+       </div>
         
     </div>
   )
