@@ -38,7 +38,7 @@ function Cart({cart, setCart, setCartCheckout, setCartTotal}) {
   
           <div className='row'>
             <div className='col-descr'><h2>Description</h2></div>
-            <div className='col-amnt'><h2>Amount</h2></div>
+            <div className='col-amnt'><h2>Amount (Kshs)</h2></div>
             <div className='col-qty'><h2>Quantity</h2></div>
             <div className='col-act'></div>
           </div>
@@ -47,7 +47,7 @@ function Cart({cart, setCart, setCartCheckout, setCartTotal}) {
 
           <div className='row'>
             <div className='col-descr'><h3>Total  </h3></div>
-            <div className='col-amnt'><h3>{ total}</h3></div>
+            <div className='col-amnt'><h3>Kshs { total}</h3></div>
             <div className='col-act'><button className='checkout-btn' onClick={checkOut}>Checkout</button></div>
           </div>
          
