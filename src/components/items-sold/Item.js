@@ -1,10 +1,12 @@
 import React, {  useState }  from 'react'
-import Rating from './Rating';
+//import Rating from './Rating';
+import { Rating } from 'react-simple-star-rating'
 
 function Item({item, cart, setCart}) {
 
   const [itemQuantity, setItemQuantity] = useState('')
   const [rateIn, setRateIn] = useState(0);
+  const [rating, setRating] = useState(0)
   
 
   function handleChange(event){
@@ -40,6 +42,17 @@ function Item({item, cart, setCart}) {
     setRateIn(inVal);
     
   }
+  // Optinal callback functions
+  const onPointerEnter = () => console.log('Enter')
+  const onPointerLeave = () => console.log('Leave')
+  const onPointerMove = ( value=50,  index=5) => console.log(value, index)
+   // Catch Rating value
+   const handleRating = (rate) => {
+   console.log(rate);
+
+    // other logic
+  }
+
 
   return (
     <div className='item'>
@@ -49,11 +62,18 @@ function Item({item, cart, setCart}) {
       <div>
       
       <div className='rate'>
-      <Rating rate={item.rating}/>
+      {/* <Rating rate={item.rating}/>
         <div className='hover-rate'>
           <input type='number' value={rateIn} onChange={handleRateChange}></input><span></span> <strong> / 10</strong><br></br>
           <button className='rate-btn' onClick={rate}>Rate</button>
-        </div>
+        </div> */}
+        <Rating
+        onClick={handleRating}
+        onPointerEnter={onPointerEnter}
+        onPointerLeave={onPointerLeave}
+        onPointerMove={onPointerMove}
+        /* Available Props */
+      />
       </div>
       
       </div>
